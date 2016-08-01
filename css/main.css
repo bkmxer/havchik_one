@@ -1,5 +1,10 @@
+html {
+  min-height: 100%;
+}
+
 body {
   font-family: 'RobotoSlab-Regular', Helvetica;
+  min-height: 100%;
 }
 
 .header_wrap {
@@ -8,6 +13,8 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 2;
+  background-color: #fff;
 }
 
 .top_logo {
@@ -96,6 +103,7 @@ h7 {
   background-color: #BCBCBC;
   padding-bottom: 10px;
   padding-top: 10px;
+  margin-bottom: -1px;
 }
 
 .footer p {
@@ -156,11 +164,12 @@ section.menu {
   border: 1px solid #F5F5F5;
   right: 10px;
   width: 25%;
-  max-width: 300px;
+  max-width: 285px;
   top: 90px;
   border-radius: 2px;
   min-height: 300px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  z-index: 5;
 }
 
 .total_summ_list {
@@ -201,14 +210,87 @@ a.add_to_order :hover {
   color: #367b63;
 }
 
-.menu_nav a.menu_nav_item {
+.menu_nav .menu_nav_item {
   margin: 15px;
   color: #929292;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
-.menu_nav a.menu_nav_item:hover {
+.menu_nav .menu_nav_item:hover {
   color: #6BB29C;
-  font-family: RobotoSlab-Bold;
+  border-bottom: 2px solid #6BB29C;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.dropdown-content a {
+  color: #929292;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: 'RobotoSlab-Light';
+}
+
+.dropdown-content a:hover {
+  background-color: #c9e7dd;
+  border: 2px solid #5FB89A;
+  border-radius: 2px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .menu_nav_item {
+  color: #6BB29C;
+}
+
+.dropdown:hover .menu_nav_item i.arrow {
+  -ms-transform: rotate(0deg);
+  /* IE 9 */
+  -webkit-transform: rotate(0deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+i.arrow {
+  transition: all 0.3s ease;
+  -ms-transform: rotate(-90deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-90deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(-90deg);
+}
+
+.menu_meals_wrap {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.menu_meal {
+  min-width: 200px;
+  min-height: 200px;
+  margin: 10px;
+  border: 1px solid #5FB89A;
 }
