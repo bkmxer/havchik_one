@@ -7,17 +7,31 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-
+footer.footer{
+  height:150px;
+}
+.order_selected{
+  display: none;
+}
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-
+  section.menu{
+  
+  }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-
+  .top_nav{
+    position: fixed;
+    top:10px;
+    right:10px
+  }
+.nav_item{
+  margin: 5px 0px !important
+}
 }
 
 /* Custom, iPhone Retina */

@@ -4,6 +4,8 @@ html
 body
   font-family: 'RobotoSlab-Regular', Helvetica
   min-height: 100%
+  margin-bottom:100px
+
 
 .header_wrap
   padding:10px
@@ -11,7 +13,7 @@ body
   position: fixed
   top: 0
   width: 100%
-  z-index: 2
+  z-index: 20
   background-color: #fff
 .top_logo
   text-align: center
@@ -69,13 +71,14 @@ h7
   margin: 0
 .footer
     position: absolute
-    bottom: 0
     width: 100%
     font-size: 20px
     font-family: RobotoSlab-Regular
     background-color: #BCBCBC
     padding-bottom: 10px
     padding-top:10px
+
+    height:100px
     margin-bottom: -1px
 .footer p
   margin: 5px auto
@@ -110,19 +113,22 @@ i.tel_i
   margin-right: 3px
 section.menu
   margin-top:100px
-
+  margin-bottom: 50px
 
 .order_selected
-  position: absolute
+  position: fixed
   border:1px solid #F5F5F5
   right:10px
   width:25%
+  z-index: 20
+  background-color: #fff
   max-width: 285px
+  min-width:150px
   top:90px
   border-radius: 2px
   min-height: 300px
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
-  z-index: 5
+
 .total_summ_list
   list-style: none
 .order_wrap
@@ -158,6 +164,7 @@ a.add_to_order
     position: relative
     display: inline-block
     transition: all 0.3s ease
+    z-index: 10
 .dropdown-content
     display: none
     position: absolute
@@ -193,10 +200,35 @@ i.arrow
   display: -ms-flex
   display: -o-flex
   display: flex
-  margin-top: 50px
+  margin-top: 30px
   flex-wrap: wrap
+
 .menu_meal
-  min-width: 200px
-  min-height: 200px
+  text-align: center
+  min-width: 180px
+  min-height: 180px
   margin: 10px
-  border: 1px solid #5FB89A
+  position: relative
+  border: 2px solid #5FB89A
+  background-repeat: no-repeat
+  background-size: 140%
+  padding:150px 10px 10px 80px
+.menu_meal:nth-of-type(3n+1)
+  background-image: url(../img/11.jpg)
+
+.menu_meal:nth-of-type(3n+2)
+  background-image: url(../img/12.jpg)
+
+.menu_meal:nth-of-type(3n+3)
+  background-image: url(../img/33.jpg)
+.meal_description
+  border:2px solid #01A578
+  border-radius:50px
+  background-color: #fff
+  text-align: center
+  color: #01A578
+  position: absolute
+  top:-10px
+  padding: 0px 10px
+  left:30px
+.add_item_order

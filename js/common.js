@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+	    $("span.my_order").click(function(){
+	        $(".order_selected").toggle();
+	    });
+
 
 
 
